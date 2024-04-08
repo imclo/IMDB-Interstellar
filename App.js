@@ -42,7 +42,11 @@ export default function App() {
             </Text>
           </View>
           <View style={styles.buttonAdd}>
-            <Pressable>
+            <Pressable
+              onPress={() => {
+                alert("Added");
+              }}
+            >
               <Text style={styles.button}> + ADD TO WATCHLIST </Text>
             </Pressable>
           </View>
@@ -200,6 +204,7 @@ const styles = StyleSheet.create({
   buttonAdd: {
     flexDirection: "row",
     justifyContent: "flex-end",
+    flex: 2,
   },
 
   button: {
@@ -211,7 +216,7 @@ const styles = StyleSheet.create({
     padding: 8,
     position: "relative",
     top: -120,
-    marginRight: 10,
+    marginRight: 20,
   },
 
   containerNotation: {
